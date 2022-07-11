@@ -156,8 +156,11 @@ This program is tested under Linux Ubuntu 20 LTS
 
 How to run program:
 1. Go to build dir
+
    $ cd build
+   
    $ ./resize_img  
+   
 2. Test  using Postman
     POST http://[host address]:8080/resize_image/   
     in body you supply JSON
