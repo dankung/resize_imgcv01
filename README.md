@@ -159,7 +159,7 @@ How to run program:
 
    $ cd build
    
-   $ ./resize_img  
+   $ ./resize_imgcv01  
    
 2. Test  using Postman
     POST http://[host address]:8080/resize_image/   
