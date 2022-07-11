@@ -1,6 +1,6 @@
 # resize_imgcv01
 
-Create a simple HTTP server application that listens on port 8080 to serves a
+Create a HTTP server application that listens on port 8080 to serves a
 specific function: resizing a jpeg image, in the form of base 64 encoded binary input data
 to the desired target dimension. The server only needs to serve exactly single API below:
 
