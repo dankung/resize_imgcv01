@@ -230,18 +230,6 @@ Mat Image_Converter::str2mat(const string& encoded)
 	string dec_jpg = base64_decode(encoded);
 	std::vector<uchar> data(dec_jpg.begin(), dec_jpg.end());
 	
-	/*
-	try {
-		imshow("Lisa-Original", img_original);
-		imshow("Lisa-Grayscale", img_grayscale);
-
-		imwrite("LisaGray.jpg", img_grayscale);
-	}
-	catch(cv::Exception& e) {
-		in_points_ori.empty()
-		//std::cout << e.msg << std::endl;
-	}
-	*/
 	
 	return cv::imdecode(cv::Mat(data), 1);
 }

@@ -3,7 +3,7 @@
 /*	
 	Created by 		: Daniel Agus Listiantoro
 	Date Created 	: 5/5/2022
-	Description		: Create a simple HTTP server application that listens on port 8080 to serves a
+	Description		: Create a HTTP server application that listens on port 8080 to serves a
 					specific function: resizing a jpeg image, in the form of base 64 encoded binary input data
 					to the desired target dimension. The server only needs to serve exactly single API below:
 */
@@ -11,7 +11,7 @@
 // Add definition of your processing function here
 /*
 Task 1:
-Please create a simple HTTP server application that listens on port 8080 to serves a
+Create a HTTP server application that listens on port 8080 to serves a
 specific function: resizing a jpeg image, in the form of base 64 encoded binary input data
 to the desired target dimension. The server only needs to serve exactly single API below:
 
@@ -55,10 +55,11 @@ void Resize_Image::resize_image(const HttpRequestPtr &req,
 	Json::Value ret;
 	
 	auto req1=HttpRequest::newHttpRequest();
+	std::string input_jpeg_chk = "";
 	
-	int x = pImageSrc.input_jpeg.compare("");
+	int x = pImageSrc.input_jpeg.compare(input_jpeg_chk);
 	
-	if ( x != 0 )
+	if ( x == 0 )
 	{
 		// error
 		ret["code"]="4xx/5xx";
