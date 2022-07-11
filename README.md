@@ -137,6 +137,7 @@ This program is tested under Linux Ubuntu 20 LTS
 
 How to run program:
 1. Go to build dir
+
     $ cd build
     $ ./resize_imgcv01  
    
