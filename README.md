@@ -159,7 +159,7 @@ How to run program:
    $ cd build
    $ ./resize_img  
 2. Test  using Postman
-    POST http://192.168.43.225:8080/resize_image/   
+    POST http://[host address]:8080/resize_image/   
     in body you supply JSON
     {   
         target_height": 200,
