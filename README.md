@@ -43,46 +43,41 @@ Requirements:
 
 Environment
 -------------------------------------------------------------------------
-$ sudo apt install git
-
-$ sudo apt install gcc
-
-$ sudo apt install g++
-
-$ sudo apt install cmake
+    $ sudo apt install git
+    $ sudo apt install gcc
+    $ sudo apt install g++
+    $ sudo apt install cmake
 
 
 jsoncpp
 -------------------------------------------------------------------------
-$ sudo apt install libjsoncpp-dev
+    $ sudo apt install libjsoncpp-dev
 
 uuid
 -------------------------------------------------------------------------
-$ sudo apt install uuid-dev
+    $ sudo apt install uuid-dev
 
 OpenSSL
 -------------------------------------------------------------------------
-$ sudo apt install openssl
-
-$ sudo apt install libssl-dev
+    $ sudo apt install openssl
+    $ sudo apt install libssl-dev
 
 zlib
 -------------------------------------------------------------------------
-$ sudo apt install zlib1g-dev
+    $ sudo apt install zlib1g-dev
 
 Database Environment 
 -------------------------------------------------------------------------
 
 PostgreSQL (optional)
 -------------------------------------------------------------------------
-$ sudo apt-get install postgresql-all
-
-$ su postgres
-# 
+    $ sudo apt-get install postgresql-all
+    $ su postgres
+    # 
 
 Sqlite3 (optional)
 -------------------------------------------------------------------------
-$ sudo apt-get install libsqlite3-dev
+    $ sudo apt-get install libsqlite3-dev
 
 Drogon Installation
 -------------------------------------------------------------------------
@@ -90,22 +85,14 @@ Assuming that the above environment and library dependencies are all ready, the 
 Install by source in Linux
 
 -------------------------------------------------------------------------
-$cd $WORK_PATH
-
-$ git clone https://github.com/an-tao/drogon
-
-$ cd drogon
-
-$ git submodule update --init
-
-
-$ mkdir build
-
-$ cd build
-
-$ cmake ..
-
-$ make && sudo make install
+    $ cd $WORK_PATH
+    $ git clone https://github.com/an-tao/drogon
+    $ cd drogon
+    $ git submodule update --init
+    $ mkdir build
+    $ cd build
+    $ cmake ..
+    $ make && sudo make install
 -------------------------------------------------------------------------
 
 The default is to compile the debug version. If you want to compile the release version, the cmake command should take the following parameters:
@@ -131,20 +118,19 @@ Building OpenCV from Source on Linux ( Ubuntu 20.0 LTS )
 
 
 Below command is normally used for configuration of OpenCV library build (executed from build folder):
-$ cmake ../
+    $ cmake ../
 
 OpenCV defaults assume "Release" build type and installation path is "/usr/local". For additional information about CMake options refer to OpenCV C++ compilation guide:
 ----------------------------------------------------------------------------------------------------------------------------------
-$ make
-
-$ sudo make install
+    $ make
+    $ sudo make install
 
 ----------------------------------------------------------------------------------------------------------------------------------
 Create symlink
 Since OpenCV4 include file in /usr/local/include/opencv4/opencv2 . 
 We create symlink:
 
-$ sudo ln -s /usr/local/include/opencv4/opencv2 /usr/local/include/opencv2 
+    $ sudo ln -s /usr/local/include/opencv4/opencv2 /usr/local/include/opencv2 
 
 ----------------------------------------------------------------------------------------------------------------------------------
 This program is tested under Linux Ubuntu 20 LTS
@@ -153,7 +139,6 @@ How to run program:
 1. Go to build dir
 
    $ cd build
-   
    $ ./resize_imgcv01  
    
 2. Test  using Postman
