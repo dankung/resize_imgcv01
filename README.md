@@ -139,6 +139,7 @@ How to run program:
 1. Go to build dir
 
     $ cd build
+    
     $ ./resize_imgcv01  
    
 2. Test  using Postman
