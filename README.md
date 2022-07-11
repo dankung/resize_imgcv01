@@ -140,6 +140,10 @@ How to run program:
 
     $ cd build
     
+    $ cmake ..
+    
+    $ make
+    
     $ ./resize_imgcv01  
    
 2. Test  using Postman
