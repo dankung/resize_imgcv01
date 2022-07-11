@@ -137,9 +137,8 @@ This program is tested under Linux Ubuntu 20 LTS
 
 How to run program:
 1. Go to build dir
-
-   $ cd build
-   $ ./resize_imgcv01  
+    $ cd build
+    $ ./resize_imgcv01  
    
 2. Test  using Postman
     POST http://[host address]:8080/resize_image/   
