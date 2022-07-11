@@ -70,17 +70,17 @@ zlib
 -------------------------------------------------------------------------
 $ sudo apt install zlib1g-dev
 
-Database Environment
+Database Environment 
 -------------------------------------------------------------------------
 
-PostgreSQL
+PostgreSQL (optional)
 -------------------------------------------------------------------------
 $ sudo apt-get install postgresql-all
 
 $ su postgres
 # 
 
-Sqlite3
+Sqlite3 (optional)
 -------------------------------------------------------------------------
 $ sudo apt-get install libsqlite3-dev
 
