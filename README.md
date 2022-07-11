@@ -121,17 +121,12 @@ After the installation is complete, the following files will be installed in the
 
 Building OpenCV from Source on Linux ( Ubuntu 20.0 LTS )
 ----------------------------------------------------------------------------------------------------------------------------------
-$ sudo apt update
-
-$ wget -O opencv-4.5.5.zip https://github.com/opencv/opencv/archive/4.5.5.zip
-
-$ unzip opencv-4.5.5.zip
-
-$ cd opencv-4.5.5
-
-$ mkdir build
-
-$ cd build
+    $ sudo apt update
+    $ wget -O opencv-4.5.5.zip https://github.com/opencv/opencv/archive/4.5.5.zip
+    $ unzip opencv-4.5.5.zip
+    $ cd opencv-4.5.5
+    $ mkdir build
+    $ cd build
 ----------------------------------------------------------------------------------------------------------------------------------
 
 
