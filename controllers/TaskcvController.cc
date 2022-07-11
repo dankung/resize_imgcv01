@@ -56,8 +56,9 @@ void Resize_Image::resize_image(const HttpRequestPtr &req,
 	
 	auto req1=HttpRequest::newHttpRequest();
 	
-	if  (pImageSrc.input_jpeg == "" )
-           //(pImageSrc.bjson == false )
+	int x = pImageSrc.input_jpeg.compare("");
+	
+	if ( x != 0 )
 	{
 		// error
 		ret["code"]="4xx/5xx";

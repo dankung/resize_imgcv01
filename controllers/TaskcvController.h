@@ -50,6 +50,8 @@ namespace drogon
 			
 
 		}
+		else
+			imgSrc.input_jpeg = "";
 		return imgSrc;
 	}
 }
