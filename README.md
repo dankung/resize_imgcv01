@@ -154,3 +154,22 @@ $ sudo ln -s /usr/local/include/opencv4/opencv2 /usr/local/include/opencv2
 ----------------------------------------------------------------------------------------------------------------------------------
 This program is tested under Linux Ubuntu 20 LTS,running on VirtualBox Windows 10 Hosts
 
+How to run program:
+1. Go to build dir
+   $ cd build
+   $ ./resize_img  
+2. Test  using Postman
+    POST http://192.168.43.225:8080/resize_image/   
+    in body you supply JSON
+    {   
+        target_height": 200,
+        "target_width": 300,
+        "input_jpeg":"/9j/4AAQSkZJRgABAQAAAQABAAD/
+        ....
+    }
+
+    input_jpeg is a jpeg file that converted to base64
+    
+ 3. Output
+    You can see the result.
+ 
