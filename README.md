@@ -152,7 +152,7 @@ We create symlink:
 $ sudo ln -s /usr/local/include/opencv4/opencv2 /usr/local/include/opencv2 
 
 ----------------------------------------------------------------------------------------------------------------------------------
-This program is tested under Linux Ubuntu 20 LTS,running on VirtualBox Windows 10 Hosts
+This program is tested under Linux Ubuntu 20 LTS
 
 How to run program:
 1. Go to build dir
