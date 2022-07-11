@@ -37,7 +37,6 @@ Content-Type: application/json
 
 Requirements:
 1. Drogon Framework 
-    https://drogon.docsforge.com/master/installation/
 2. OpenCV 4.xx
 3. CMake 3.2.x
 
