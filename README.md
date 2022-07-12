@@ -180,14 +180,14 @@ How to run program:
     	# Python code for converting base64 to jpg
 	
 		import base64
-        	file = open('encode1.bin', 'rb')
+		
+		file = open('encode1.bin', 'rb')
 		byte = file.read()
 		
 		file.close()
-  
-        	decodeit = open('image12.jpg', 'wb')
-        	decodeit.write(base64.b64decode((byte)))
-        	decodeit.close()
+  		decodeit = open('image12.jpg', 'wb')
+		decodeit.write(base64.b64decode((byte)))
+		decodeit.close()
     	
 4. Output
     You can see the result.
