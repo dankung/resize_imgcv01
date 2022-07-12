@@ -180,7 +180,6 @@ How to run program:
     	# Python code for converting base64 to jpg
 	
 		import base64
-        
         	file = open('encode1.bin', 'rb')
 		byte = file.read()
 		
