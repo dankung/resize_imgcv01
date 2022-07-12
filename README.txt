@@ -137,11 +137,11 @@ This program is tested under Linux Ubuntu 20 LTS
 
 How to run program:
 
-    Download from github
+1. Download from github
 
     $ git clone https://github.com/dankung/resize_imgcv01
 
-    Go to build dir
+2. Go to build dir
 
     $ cd build
 
@@ -151,19 +151,19 @@ How to run program:
 
     $ ./resize_imgcv01
 
-    Test using Postman POST http://[host address]:8080/resize_image/
+3.  Test using Postman POST http://[host address]:8080/resize_image/
     in body you supply JSON {
     target_height": 200, "target_width": 300, "input_jpeg":"/9j/4AAQSkZJRgABAQAAAQABAAD/ .... }
 
     input_jpeg is a jpeg file that converted to base64
 
-    Output You can see the result.
+4.    Output You can see the result.
 
-    Close application
+5.  Close application
 
     $ Ctrl-Z
 
-    Release port
+6.  Release port
 
     $ fuser -k [port]/tcp
 
