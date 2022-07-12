@@ -136,7 +136,11 @@ We create symlink:
 This program is tested under Linux Ubuntu 20 LTS
 
 How to run program:
-1. Go to build dir
+1. Download from github
+
+    $ git clone https://github.com/dankung/resize_imgcv01
+    
+2. Go to build dir
 
     $ cd build
     
@@ -146,7 +150,7 @@ How to run program:
     
     $ ./resize_imgcv01  
    
-2. Test  using Postman
+3. Test  using Postman
     POST http://[host address]:8080/resize_image/   
     in body you supply JSON
     {   
@@ -158,6 +162,15 @@ How to run program:
 
     input_jpeg is a jpeg file that converted to base64
     
- 3. Output
+4. Output
     You can see the result.
  
+5. Close application
+   
+   $ Ctrl-Z
+   
+6. Release port
+   
+   $ fuser -k [port]/tcp
+   
+   $ fuser -k 8080/tcp
