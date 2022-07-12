@@ -153,14 +153,35 @@ How to run program:
 3. Test  using Postman
     POST http://[host address]:8080/resize_image/   
     in body you supply JSON
-    {   
-        target_height": 200,
-        "target_width": 300,
-        "input_jpeg":"/9j/4AAQSkZJRgABAQAAAQABAAD/
-        ....
-    }
+    For example:
+    
+        {   
+        
+            "target_height": 200,
+        
+            "target_width": 300,
+        
+            "input_jpeg":"/9j/4AAQSkZJRgABAQAAAQABAAD/
+            ....
+    
+        }
 
     input_jpeg is a jpeg file that converted to base64
+    
+    
+        import base64
+        import numpy as np
+        import cv2
+
+        with open("image1.jpg", "rb") as f:
+            im_b64 = base64.b64encode(f.read())
+        with open("encode1.bin", "wb") as file:
+	        file.write(im_b64)
+        im_bytes = base64.b64decode(im_b64)
+        im_arr = np.frombuffer(im_bytes, dtype=np.uint8)  # im_arr is one-dim Numpy array
+        img = cv2.imdecode(im_arr, flags=cv2.IMREAD_COLOR)
+    
+    Python code for converting jpg to base64
     
 4. Output
     You can see the result.
