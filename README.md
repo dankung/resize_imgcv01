@@ -155,15 +155,16 @@ How to run program:
     in body you supply JSON
     For example:
     
-    {   
-        "target_height": 200,
+        {   
         
-        "target_width": 300,
+            "target_height": 200,
         
-        "input_jpeg":"/9j/4AAQSkZJRgABAQAAAQABAAD/
-        ....
+            "target_width": 300,
+        
+            "input_jpeg":"/9j/4AAQSkZJRgABAQAAAQABAAD/
+            ....
     
-    }
+        }
 
     input_jpeg is a jpeg file that converted to base64
     
