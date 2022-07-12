@@ -154,8 +154,9 @@ How to run program:
     POST http://[host address]:8080/resize_image/   
     in body you supply JSON
     For example:
+    
     {   
-        target_height": 200,
+        "target_height": 200,
         
         "target_width": 300,
         
