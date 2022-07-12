@@ -136,27 +136,19 @@ We create symlink:
 This program is tested under Linux Ubuntu 20 LTS
 
 How to run program:
-<<<<<<< HEAD
 
-    Download from github
-
-    $ git clone https://github.com/dankung/resize_imgcv01
-
-    Go to build dir
-=======
 1. Download from github
 
     $ git clone https://github.com/dankung/resize_imgcv01
     
 2. Go to build dir
->>>>>>> 6183ec34fbd537ecf341ebff541daaa980fff451
 
     $ cd build
 
     $ cmake ..
 
     $ make
-<<<<<<< HEAD
+
 
     $ ./resize_imgcv01
 
@@ -177,7 +169,6 @@ How to run program:
     $ fuser -k [port]/tcp
 
     $ fuser -k 8080/tcp
-=======
     
     $ ./resize_imgcv01  
    
@@ -227,5 +218,3 @@ How to run program:
    
    $ fuser -k 8080/tcp
 
-
->>>>>>> 6183ec34fbd537ecf341ebff541daaa980fff451
