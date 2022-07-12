@@ -67,44 +67,47 @@ void Resize_Image::resize_image(const HttpRequestPtr &req,
 		auto resp=HttpResponse::newHttpJsonResponse(ret);
 		callback(resp);
 	}
-	
-	/*
-	LOG_DEBUG << "isi imgbase64: " << pImageSrc.input_jpeg << "  end";
-	LOG_DEBUG << "isi target_width: " << pImageSrc.target_width << "  end";
-	LOG_DEBUG << "isi target_height: " << pImageSrc.target_height << "  end";
-	*/
-	
-	//Authentication algorithm, read database, verify identity, etc...
-    //...
-	//ImageSrc imgSrc = (*pImageSrc);
-	
-	Image_Converter img_converter;
-	std::string imgbase64, imgbase64_out;
-	
-	Mat image_out;
-	Mat image_resized;
-	
-	image_out = img_converter.str2mat(pImageSrc.input_jpeg);
-	if ( image_out.empty() == false )
+	else
 	{
-		//resize 
-		resize(image_out, image_resized, Size(pImageSrc.target_width, pImageSrc.target_height), INTER_LINEAR);
-		imgbase64_out = img_converter.mat2str(image_resized);
+		/*
+		LOG_DEBUG << "isi imgbase64: " << pImageSrc.input_jpeg << "  end";
+		LOG_DEBUG << "isi target_width: " << pImageSrc.target_width << "  end";
+		LOG_DEBUG << "isi target_height: " << pImageSrc.target_height << "  end";
+		*/
 	
+		//Authentication algorithm, read database, verify identity, etc...
+		//...
+		//ImageSrc imgSrc = (*pImageSrc);
+	
+		Image_Converter img_converter;
+		std::string imgbase64, imgbase64_out;
+	
+		Mat image_out;
+		Mat image_resized;
+	
+		image_out = img_converter.str2mat(pImageSrc.input_jpeg);
+		if ( image_out.empty() == false )
+		{
+			//resize 
+			resize(image_out, image_resized, Size(pImageSrc.target_width, pImageSrc.target_height), INTER_LINEAR);
+			imgbase64_out = img_converter.mat2str(image_resized);
+			
+			ret["code"]="200";
+			ret["message"]="success";
+			ret["output_jpeg"]= imgbase64_out;
+			auto resp=HttpResponse::newHttpJsonResponse(ret);
+			callback(resp);
+	
+		}
+		else
+		{
+			// error
+			ret["code"]="4xx/5xx";
+			ret["message"]="[Conversion Base64 to image error ]";
+			auto resp=HttpResponse::newHttpJsonResponse(ret);
+			callback(resp);
+		}
+	
+		
 	}
-    else
-	{
-		// error
-		ret["code"]="4xx/5xx";
-		ret["message"]="[Conversion Base64 to image error ]";
-		auto resp=HttpResponse::newHttpJsonResponse(ret);
-		callback(resp);
-	}
-	
-	ret["code"]="200";
-	ret["message"]="success";
-	ret["output_jpeg"]= imgbase64_out;
-    auto resp=HttpResponse::newHttpJsonResponse(ret);
-    callback(resp);
-	
 }
