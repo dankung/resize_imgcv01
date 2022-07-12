@@ -136,28 +136,35 @@ We create symlink:
 This program is tested under Linux Ubuntu 20 LTS
 
 How to run program:
-1. Go to build dir
+
+    Download from github
+
+    $ git clone https://github.com/dankung/resize_imgcv01
+
+    Go to build dir
 
     $ cd build
-    
+
     $ cmake ..
-    
+
     $ make
-    
-    $ ./resize_imgcv01  
-   
-2. Test  using Postman
-    POST http://[host address]:8080/resize_image/   
-    in body you supply JSON
-    {   
-        target_height": 200,
-        "target_width": 300,
-        "input_jpeg":"/9j/4AAQSkZJRgABAQAAAQABAAD/
-        ....
-    }
+
+    $ ./resize_imgcv01
+
+    Test using Postman POST http://[host address]:8080/resize_image/
+    in body you supply JSON {
+    target_height": 200, "target_width": 300, "input_jpeg":"/9j/4AAQSkZJRgABAQAAAQABAAD/ .... }
 
     input_jpeg is a jpeg file that converted to base64
-    
- 3. Output
-    You can see the result.
- 
+
+    Output You can see the result.
+
+    Close application
+
+    $ Ctrl-Z
+
+    Release port
+
+    $ fuser -k [port]/tcp
+
+    $ fuser -k 8080/tcp
