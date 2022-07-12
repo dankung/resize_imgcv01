@@ -170,25 +170,24 @@ How to run program:
     
         # Python code for converting jpg to base64
 
-        import base64
-	
-        with open('image1.jpg', 'rb') as f:
-            im_b64 = base64.b64encode(f.read())
+		import base64
+		with open('image1.jpg', 'rb') as f:
+            	    im_b64 = base64.b64encode(f.read())
          
-	with open('encode1.bin', 'wb') as file:
-	    file.write(im_b64)
+		with open('encode1.bin', 'wb') as file:
+	           file.write(im_b64)
     
     	# Python code for converting base64 to jpg
 	
-        import base64
+        	import base64
         
-	file = open('encode1.bin', 'rb')
-        byte = file.read()
-        file.close()
+		file = open('encode1.bin', 'rb')
+        	byte = file.read()
+        	file.close()
   
-        decodeit = open('image12.jpg', 'wb')
-        decodeit.write(base64.b64decode((byte)))
-        decodeit.close()
+        	decodeit = open('image12.jpg', 'wb')
+        	decodeit.write(base64.b64decode((byte)))
+        	decodeit.close()
     	
 4. Output
     You can see the result.
