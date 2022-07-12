@@ -172,10 +172,10 @@ How to run program:
 
 		import base64
 		with open('image1.jpg', 'rb') as f:
-            	    im_b64 = base64.b64encode(f.read())
+			im_b64 = base64.b64encode(f.read())
          
 		with open('encode1.bin', 'wb') as file:
-	           file.write(im_b64)
+			file.write(im_b64)
     
     	# Python code for converting base64 to jpg
 	
