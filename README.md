@@ -153,11 +153,15 @@ How to run program:
 3. Test  using Postman
     POST http://[host address]:8080/resize_image/   
     in body you supply JSON
+    For example:
     {   
         target_height": 200,
+        
         "target_width": 300,
+        
         "input_jpeg":"/9j/4AAQSkZJRgABAQAAAQABAAD/
         ....
+    
     }
 
     input_jpeg is a jpeg file that converted to base64
